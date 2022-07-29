@@ -2,7 +2,7 @@
     width: 100%;
     height: 400px;
     border: 10px solid transparent;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 input {
     font-size: 1.4em;
@@ -11,7 +11,9 @@ input {
     width: 400px;
     margin: 15px 0 15px 10px;
     border-radius: 30px;
-
+}
+#search-places-input::placeholder{
+    padding: 0 0 0 20px;
 }
 .custom-map-control-button {
     background-color: #fff;
@@ -43,4 +45,42 @@ input {
     padding: 4px;
     margin-top: 2px;
     margin-bottom: 2px;
+  }
+  #place-list{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 0px 10px 3px 10px;
+    margin: 10px;
+    position: fixed;
+    width: fit-content;
+    height: fit-content;
+  }
+  #place-list:hover{
+    border-color: rgb(70, 70, 255);
+    background-color: rgb(228, 228, 228);
+    color: black;
+  }
+  #add-places-button{
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 400 18px Roboto, Arial, sans-serif;
+    overflow: hidden;
+    height: 40px;
+    cursor: pointer;
+  }
+  #draw-a-route{
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 400 18px Roboto, Arial, sans-serif;
+    overflow: hidden;
+    height: 40px;
+    cursor: pointer;
   }

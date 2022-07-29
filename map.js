@@ -185,8 +185,6 @@ function callRoute() {
     
 }
 
-
-
 function calcRoute() {
     var selectedMode = document.getElementById('mode').value;
     var request = {
@@ -197,6 +195,12 @@ function calcRoute() {
         // "property."
         travelMode: google.maps.TravelMode[selectedMode],
     };
+    if(wayPoints.length > 0) {
+        destination = wayPoints[wayPoints.length - 1].location;
+        request.destination = destination;
+        request.waypoints = wayPoints;
+        request.optimizeWaypoints = true;
+    }
     directionsService.route(request, function(response, status) {
       if (status == 'OK') {
         directionsRenderer.setDirections(response);

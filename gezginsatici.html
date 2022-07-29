@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/motokurye2.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../img/motokuryee.png">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -17,9 +17,9 @@
 </head>
 <body>
     <div id="search-places">
-        <input type="text" placeholder="Gidilecek yeri seçiniz" id="search-places-input">
+        <input type="text" placeholder="Gidilecek yeri seçiniz..." id="search-places-input">
         <input type="button" value="Ekle" class="bi bi-arrow-return-left" id="add-places-button" onclick="addToList()">
-        <input type="button" value="Rota Çiz" onclick="callRoute()">
+        <input type="button" value="Rota Çiz" id="draw-a-route" onclick="callRoute()">
           <b>Mode of Travel: </b>
             <select id="mode" class="selecting-mode" onchange="calcRoute(); ">
               <option class="bi bi-car-front" value="DRIVING">Driving</option>
@@ -33,8 +33,7 @@
     <div id="panel"></div>
     <div id="place-list"></div>
     <script src="map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=[KEYİNİZ]&libraries=places&v=weekly"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=[YOUR-KEY]&callback=initMap&libraries=places&v=weekly"></script>
 </script>
 </body>
 </html>
