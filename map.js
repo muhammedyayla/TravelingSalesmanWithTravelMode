@@ -9,7 +9,6 @@ let place;
 let directionsService;
 let directionsRenderer;
 let locationButton;
-
 const konum = {
     lat: 41.0437815,
     lng: 29.0066407
